@@ -1,0 +1,35 @@
+# Das Wichtigste: Alle Geheimnisse
+secrets.yaml
+
+# Die Home Assistant-Datenbank (riesig und nutzlos im Repo)
+home-assistant_v2.db
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
+
+# Alle Anmeldeinformationen, Tokens und Gerätedaten
+.storage/
+
+# Log-Dateien
+home-assistant.log
+*.log
+
+# Backups
+*.zip
+*.tar.gz
+*.tar
+
+# Python-Cache
+__pycache__/
+*.pyc
+
+# Abhängigkeiten, die HA selbst installiert
+deps/
+
+# Versions-Marker
+.HA_VERSION
+
+# Konfigurationen von Add-ons (können Tokens enthalten)
+.vscode/
+.cloud/
+.google.token
+

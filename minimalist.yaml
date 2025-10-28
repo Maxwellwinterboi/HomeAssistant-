@@ -1,0 +1,167 @@
+button_card_templates: !include_dir_merge_named ui-lovelace-minimalist/UI
+
+card_custom_card_andyblac_room: 'ui-lovelace-minimalist/UI/custom_card_andyblac_room.yaml'
+card_yellow_no_state: 'ui-lovelace-minimalist/UI/card_yellow_no_state.yaml'
+
+title: Smart Dashboard
+views:
+  - title: Startseite
+    path: start
+    icon: mdi:home
+    cards:
+
+      # 🕒 Datum & Uhrzeit
+      - type: custom:button-card
+        template: card_title
+        name: >
+          [[[ return `${states['sensor.time'].state} \n ${new Date().toLocaleDateString('de-DE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}` ]]]
+
+      # 🔘 Icon-Leiste
+      - type: horizontal-stack
+        cards:
+          - type: custom:button-card
+            icon: mdi:gate
+            name: Tor
+            entity: input_boolean.dummy_gate
+
+          - type: custom:button-card
+            icon: mdi:tablet
+            name: Tablet
+            entity: input_boolean.dummy_tablet
+
+          - type: custom:button-card
+            icon: mdi:heart
+            name: Szene
+            entity: input_boolean.dummy_scene
+
+          - type: custom:button-card
+            icon: mdi:table-chair
+            name: Garten
+            entity: input_boolean.dummy_garden
+
+          - type: custom:button-card
+            icon: mdi:alarm-light
+            name: Alarm
+            entity: input_boolean.dummy_alarm
+
+      # 🌡 Wetterbereich (Dummy)
+      - type: vertical-stack
+        cards:
+          - type: weather-forecast
+            entity: weather.dummy_weather
+            show_forecast: true
+
+          - type: custom:button-card
+            entity: sensor.dummy_temperature
+            show_icon: false
+            name: Aktuell
+            show_state: true
+            state_display: "[[ sensor.dummy_temperature ]] °C"
+            styles:
+              card:
+                - font-size: 32px
+                - text-align: center
+                - padding: 12px
+                - background-color: "#f2f2f2"
+                - border-radius: 12px
+
+      # 🏘️ Räume
+      - type: custom:button-card
+        template: card_title
+        name: Stanze
+
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - type: custom:button-card
+            template: card_room
+            name: Homy
+            icon: mdi:home
+            variables:
+              ulm_card_room_temperature: sensor.dummy_temp_homy
+              ulm_card_room_humidity: sensor.dummy_humidity_homy
+
+          - type: custom:button-card
+            template: card_room
+            name: CED
+            icon: mdi:server
+            variables:
+              ulm_card_room_temperature: sensor.dummy_temp_ced
+              ulm_card_room_humidity: sensor.dummy_humidity_ced
+
+          - type: custom:button-card
+            template: card_room
+            name: Primo Piano
+            icon: mdi:sofa
+            variables:
+              ulm_card_room_temperature: sensor.dummy_temp_1
+              ulm_card_room_humidity: sensor.dummy_humidity_1
+
+          - type: custom:button-card
+            template: card_room
+            name: Secondo Piano
+            icon: mdi:bed
+            variables:
+              ulm_card_room_temperature: sensor.dummy_temp_2
+              ulm_card_room_humidity: sensor.dummy_humidity_2
+
+      # 🧩 Strumenti
+      - type: custom:button-card
+        template: card_title
+        name: Strumenti
+
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - type: custom:button-card
+            template: card_generic
+            icon: mdi:youtube
+            name: Scene & Media
+            entity: input_boolean.dummy_media
+
+          - type: custom:button-card
+            template: card_generic
+            icon: mdi:battery
+            name: Consumi
+            entity: input_boolean.dummy_power
+
+          - type: custom:button-card
+            template: card_generic
+            icon: mdi:chart-bar
+            name: Monitoring
+            entity: input_boolean.dummy_monitoring
+
+          - type: custom:button-card
+            template: card_generic
+            icon: mdi:cog
+            name: Settings
+            tap_action:
+              action: navigate
+              navigation_path: /config
+
+      # 👥 Präsenzkarten
+      - type: custom:button-card
+        template: card_title
+        name: Präsenz
+
+      - type: grid
+        columns: 2
+        square: false
+        cards:
+          - type: custom:button-card
+            template: card_person
+            entity: person.nik
+            name: Nik
+            variables:
+              ulm_card_person_entity_picture: /local/avatars/nik.jpg
+              ulm_card_person_use_entity_picture: true
+
+          - type: custom:button-card
+            template: card_person
+            entity: person.marika
+            name: Marika
+            variables:
+              ulm_card_person_entity_picture: /local/avatars/marika.jpg
+              ulm_card_person_use_entity_picture: true

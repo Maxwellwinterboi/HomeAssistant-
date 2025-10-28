@@ -1,0 +1,15 @@
+card_esh_welcome:
+  template: "ulm_language_variables"
+  show_icon: false
+  show_name: false
+  triggers_update: "all"
+  styles:
+    card:
+      - background: "var(--card-background-color)"
+      - padding: 16px
+  custom_fields:
+    welcome:
+      card:
+        type: custom:button-card
+        template: card_esh_welcome_collapse
+        variables: "[[ variables ]]"

@@ -1,0 +1,140 @@
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+# Lovelace-Dashboard: Standard-Modus + UI-Lovelace-Minimalist
+lovelace:
+  mode: storage
+  resources:
+    - url: /hacsfiles/button-card/button-card.js
+      type: module
+    - url: /hacsfiles/ui-lovelace-minimalist/ui-lovelace-minimalist.js
+      type: module
+    - url: /local/mini-graph-card-bundle.js?v=0.13.0
+      type: module
+
+# Automationen, Skripte, Szenen
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+
+# Template-Sensoren (Uhrzeit, Datum, Lampenstatus & Trigger-Templates)
+template:
+  # Block 1: Nicht-Trigger-basierte Sensoren (sensor:)
+  - sensor:
+      # Uhrzeit & Datum
+      - name: current_time_display
+        unique_id: current_time_display
+        state: "{{ now().strftime('%H:%M') }}"
+        scan_interval: 60
+
+      - name: current_date_display
+        unique_id: current_date_display
+        state: "{{ now().strftime('%A, %d %B %Y') }}"
+        scan_interval: 3600
+
+      # Anzahl aller eingeschalteten Lampen
+      - name: "Anzahl eingeschalteter Lampen"
+        unique_id: anzahl_eingeschalteter_lampen
+        state: >-
+          {{ states.light | selectattr('state', 'eq', 'on') | list | count }}
+        unit_of_measurement: "Lampen"
+        icon: mdi:lightbulb-multiple-outline
+
+      # Anzahl eingeschalteter Lampen in Gruppe
+      - name: "Anzahl Lampen an (Gruppe)"
+        unique_id: anzahl_lampen_an_gruppe_sensor
+        state: >
+          {% if states('light.alle_lampen') is not none %}
+            {% set active_lights_in_group = states.light
+              | selectattr('entity_id', 'in', state_attr('light.alle_lampen', 'entity_id') | default([]))
+              | selectattr('state', 'eq', 'on') | list %}
+            {{ active_lights_in_group | count }}
+          {% else %}
+            0
+          {% endif %}
+        unit_of_measurement: "Lichter"
+        icon: >
+          {% if states('sensor.anzahl_lampen_an_gruppe') | int > 0 %}
+            mdi:lightbulb-on
+          {% else %}
+            mdi:lightbulb-off
+          {% endif %}
+        attributes:
+          status_text: >
+            {% if states('sensor.anzahl_lampen_an_gruppe') | int > 0 %}
+              {{ states('sensor.anzahl_lampen_an_gruppe') }} Lampe(n) an
+            {% else %}
+              Alle Lampen aus
+            {% endif %}
+
+      # Gruppenstatus als on/off
+      - name: "Lampen Gruppe Status"
+        unique_id: lampen_gruppe_status_bool_sensor
+        state: >
+          {% if is_state('light.alle_lampen', 'on') %}
+            on
+          {% else %}
+            off
+          {% endif %}
+        icon: >
+          {% if is_state('light.alle_lampen', 'on') %}
+            mdi:lightbulb-on
+          {% else %}
+            mdi:lightbulb-off
+          {% endif %}
+          
+# -------------------------------------------------------------
+# Block 2: Trigger-basierte Template-Entitäten (Jeder Block hat einen eigenen Bindestrich)
+# -------------------------------------------------------------
+  
+  # Ring Intercom Klingel-Sensor für Google (Wird durch das Event ausgelöst)
+  - trigger:
+      - platform: event
+        event_type: ding                  # Der korrekte Event-Typ aus deinem Screenshot
+        event_data:
+          entity_id: event.klingeln       # Deine Event-Entitäts-ID
+          
+    binary_sensor:
+      - name: "Google Klingel Sensor"
+        unique_id: ring_intercom_klingel_google
+        device_class: doorbell           # Wichtig für Google Assistant
+        state: "on"
+        auto_off: 5                      # Setzt sich nach 5 Sekunden zurück 
+
+  # Bubble Card Module-Speicherung (Erster Block)
+  - trigger:
+      - platform: event
+        event_type: bubble_card_update_modules
+        
+    sensor:
+      - name: "Bubble Card Modules"
+        state: "saved"
+        icon: "mdi:puzzle"
+        attributes:
+          modules: "{{ trigger.event.data.modules }}"
+          last_updated: "{{ trigger.event.data.last_updated }}"
+
+  # Bubble Card Module-Speicherung (Zweiter Block, da doppelt vorhanden war)
+  - trigger:
+      - platform: event
+        event_type: bubble_card_update_modules
+        
+    sensor:
+      - name: "Bubble Card Modules 2" # Geändert, um Konflikte zu vermeiden
+        state: "saved"
+        icon: "mdi:puzzle"
+        attributes:
+          modules: "{{ trigger.event.data.modules }}"
+          last_updated: "{{ trigger.event.data.last_updated }}"
+
+spotcast:
+  sp_dc: AQA3m_9O4CFY-UoJhwh13kltaa_B4SMPJM8tag4byCYyASp7oYq5jaYT9f7ghELh7Bu__AAi-aNY8qQ4aONxLfwr0DHYyg532jkGepcxwVAavSvIIdypVeL-lOqdkM2Fyv01UTEyYRoMgF-sJxuveU8DHEv0Uu57c8vn-qxfKT4BkLh7piV13va9W1ORTouL6RAcQ2co4IR8x6o359s
+  sp_key: 7ddd97bc-27a6-4877-9fcf-f1847b769fd6
+  country: DE
+
+# HACS: Saver-Integration (ohne Optionen)
+saver:

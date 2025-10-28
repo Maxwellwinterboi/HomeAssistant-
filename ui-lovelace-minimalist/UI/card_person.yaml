@@ -1,0 +1,21 @@
+card_person:
+  template: "ulm_language_variables"
+  show_icon: false
+  show_name: true
+  show_state: true
+  variables:
+    ulm_card_person_entity_picture: /local/avatars/placeholder.png
+    ulm_card_person_use_entity_picture: true
+  custom_fields:
+    picture: >
+      [[[
+        return `<img src="${variables.ulm_card_person_entity_picture}" style="border-radius:50%;width:48px;height:48px;">`
+      ]]]
+  styles:
+    custom_fields:
+      picture:
+        - justify-self: center
+    card:
+      - padding: 12px
+      - background: "var(--card-background-color)"
+      - border-radius: 12px

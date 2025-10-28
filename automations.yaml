@@ -1,0 +1,366 @@
+- id: '1754904576550'
+  alias: 'Wohnung Licht Zustand abrufen '
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - light.wohnung_licht
+    from: 'off'
+    to: 'on'
+  conditions: []
+  actions:
+  - action: saver.restore_state
+    metadata: {}
+    data:
+      entity_id: light.wohnung_licht
+  mode: single
+- id: '1754904888389'
+  alias: 'Speichere Wohnung Licht Zustand '
+  description: ''
+  triggers:
+  - trigger: time_pattern
+    seconds: '30'
+  conditions: []
+  actions:
+  - action: saver.save_state
+    metadata: {}
+    data:
+      entity_id:
+      - light.wohnung_licht
+  mode: single
+- id: '1755072460230'
+  alias: Wohnungstüre Abschließen
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - input_boolean.wohnungsture
+    from: 'on'
+    to: 'off'
+  conditions: []
+  actions:
+  - action: lock.lock
+    metadata: {}
+    data: {}
+    target:
+      device_id: f8bd706d763958876f63414a852d5bc3
+  mode: single
+- id: '1755106007479'
+  alias: Badezimmerspiegel an/aus
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - switch.lichtschalter_badezimmer_multi_click_down
+  conditions: []
+  actions:
+  - type: toggle
+    device_id: ecc5e993d15a3a6f6d5a325add7bfea2
+    entity_id: 1ca01dc5fdae9d07f3a5964aa70e0ae8
+    domain: switch
+  mode: single
+- id: '1755507879614'
+  alias: Lichtschalter Wohnzimmer On/Off
+  description: ''
+  use_blueprint:
+    path: patpac9/Easy_Custom_Aquara_Model_H1.yaml
+    input:
+      controller: ' Wohnzimmer Lichtschalter'
+      button_1_pressed:
+      - action: light.toggle
+        metadata: {}
+        data: {}
+        target:
+          area_id: wohnzimmer
+      button_2_pressed:
+      - action: light.toggle
+        metadata: {}
+        data: {}
+        target:
+          area_id: wohnzimmer
+- id: '1755586155214'
+  alias: 'Klingel Benachrichtigung '
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - event.klingel
+    attribute: event_type
+    to: ding
+  - trigger: event
+    event_type: Event.klingel
+  conditions: []
+  actions:
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.nestaudio8129
+      message: Dingdong
+    target:
+      entity_id:
+      - tts.google_ai_tts
+  - action: notify.tv_noti
+    metadata: {}
+    data:
+      message: Ding Dong
+      title: 'Es klingelt '
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.nesthub7128
+      message: Dingdong
+    target:
+      entity_id: tts.google_ai_tts
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.schlafzimmer
+      message: Ding Dong
+    target:
+      entity_id: tts.google_ai_tts
+  - action: tts.speak
+    metadata: {}
+    data:
+      cache: true
+      media_player_entity_id: media_player.honor_pad_x8a
+      message: Dingdong
+    target:
+      entity_id: tts.google_ai_tts
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 15
+      milliseconds: 0
+  - action: media_player.turn_off
+    metadata: {}
+    data: {}
+    target:
+      entity_id:
+      - media_player.nesthub7128
+      - media_player.nestaudio8129
+      - media_player.schlafzimmer
+  mode: single
+- id: '1755587373328'
+  alias: 'Beide Türen öffnen '
+  description: ''
+  triggers:
+  - trigger: state
+    entity_id:
+    - input_button.beide_turen_offnen
+  conditions: []
+  actions:
+  - action: lock.open
+    metadata: {}
+    data: {}
+    target:
+      entity_id: lock.nuki
+  - action: button.press
+    metadata: {}
+    data: {}
+    target:
+      entity_id: button.hausture_tur_offnen
+  mode: single
+- id: '1755595148085'
+  alias: 'Flur Lichteinstellungen '
+  description: ''
+  use_blueprint:
+    path: Blackshome/sensor-light.yaml
+    input:
+      motion_trigger:
+      - binary_sensor.anwesenheit_flur_occupancy
+      light_switch:
+        entity_id: light.flurlicht
+      include_night_lights: night_lights_enabled
+      night_lights_conditions:
+      - time_enabled
+      night_lights_entity_state:
+      - binary_sensor.anwesenheit_flur_occupancy
+      night_lights_after_time: '21:30:00'
+      night_lights_before_time: 07:00:00
+      night_lights:
+        entity_id:
+        - light.flurlicht
+        - light.lichterkette_flur_steckdose_1
+      night_time_delay: 0
+      include_night_light_control:
+      - use_brightness
+      night_light_brightness: 10
+      time_delay: 0
+      include_light_control:
+      - use_brightness
+      light_transition_on: 2.5
+      light_transition_off: 2
+- id: '1756831258831'
+  alias: Bad Lichtschalter oben
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: f81c3d6cec663a18efa45157a6b09c93
+    type: action
+    subtype: single_up
+    trigger: device
+  conditions: []
+  actions:
+  - action: light.toggle
+    metadata: {}
+    data: {}
+    target:
+      entity_id: light.bad_alles
+  mode: single
+- id: '1756831418939'
+  alias: Bad Lichtschalter unten
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: f81c3d6cec663a18efa45157a6b09c93
+    type: action
+    subtype: single_down
+    trigger: device
+  conditions: []
+  actions:
+  - action: switch.toggle
+    metadata: {}
+    data: {}
+    target:
+      entity_id: switch.badezimmerspiegel
+  mode: single
+- id: '1756831598035'
+  alias: 'Wohnzimmer Lichtschalter '
+  description: ''
+  triggers:
+  - domain: mqtt
+    device_id: 36c74eeb9cc4b0471ccc9dfd9cc6b6b4
+    type: action
+    subtype: single
+    trigger: device
+  conditions: []
+  actions:
+  - if:
+    - condition: state
+      entity_id: light.wohnzimmer_licht
+      state: 'off'
+    then:
+    - action: light.turn_on
+      metadata: {}
+      data: {}
+      target:
+        entity_id: light.wohnzimmer_licht
+    else:
+    - action: light.turn_off
+      metadata: {}
+      data: {}
+      target:
+        entity_id: light.wohnzimmer_licht
+  mode: single
+- id: '1756885403932'
+  alias: Badezimmer Nachtlicht
+  description: ''
+  use_blueprint:
+    path: Blackshome/smart-light.yaml
+    input:
+      weekday_options:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+      include_weekdays: weekday_enabled
+      light_switch:
+        entity_id: light.bad_alles
+      include_night_lights: night_lights_disabled
+      night_lights:
+        entity_id: light.bad_alles
+      include_night_light_control:
+      - use_brightness
+      night_lights_before_time: 06:00:00
+      night_lights_after_time: '23:40:00'
+- id: '1756993984696'
+  alias: 'Bad Lichteinstellungen '
+  description: ''
+  use_blueprint:
+    path: Blackshome/sensor-light.yaml
+    input:
+      motion_trigger:
+      - binary_sensor.anwesenheit_bad_occupancy
+      light_switch:
+        entity_id: light.bad_alles
+      include_night_lights: night_lights_enabled
+      night_lights_conditions:
+      - time_enabled
+      night_lights_entity_state:
+      - binary_sensor.anwesenheit_flur_occupancy
+      night_lights_after_time: '23:00:00'
+      night_lights_before_time: 07:00:00
+      night_lights:
+        entity_id: light.bad_alles
+      night_time_delay: 0
+      include_night_light_control:
+      - use_brightness
+      night_light_brightness: 10
+      time_delay: 0
+      include_light_control:
+      - use_brightness
+      light_transition_on: 1.5
+      light_transition_off: 2
+      light_colour_temperature: 8000
+- id: '1757354319725'
+  alias: Bildschirm Helligkeit tablet
+  description: ''
+  triggers: []
+  conditions: []
+  actions:
+  - choose:
+    - conditions:
+      - condition: time
+        after: '21:00:00'
+        weekday:
+        - sun
+        - sat
+        - fri
+        - thu
+        - wed
+        - tue
+        - mon
+      sequence:
+      - device_id: 8ec073889fd3cb97e06dee7a5a97852b
+        domain: number
+        entity_id: af9ebdd2321a678b789c28c91bca8781
+        type: set_value
+        value: 20
+    - conditions:
+      - condition: time
+        after: 06:00:00
+        weekday:
+        - fri
+        - thu
+        - wed
+        - tue
+        - mon
+        - sat
+        - sun
+      sequence:
+      - device_id: 8ec073889fd3cb97e06dee7a5a97852b
+        domain: number
+        entity_id: af9ebdd2321a678b789c28c91bca8781
+        type: set_value
+        value: 100
+  mode: single
+- id: '1759118304161'
+  alias: 'Büro Lichteinstellungen '
+  description: ''
+  use_blueprint:
+    path: Blackshome/sensor-light.yaml
+    input:
+      motion_trigger:
+      - binary_sensor.anwesenheit_buro_occupancy
+      light_switch:
+        entity_id: light.buro_licht
+      time_delay: 0
+      include_light_control:
+      - use_brightness
+      - use_transition
+      light_transition_on: 1.5
+      light_transition_off: 3

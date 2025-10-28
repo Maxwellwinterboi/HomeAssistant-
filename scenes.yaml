@@ -1,0 +1,2528 @@
+- id: '1733525098367'
+  name: Chillen
+  entities:
+    light.stehlampe:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 168
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 39.681
+      - 98.431
+      rgb_color:
+      - 255
+      - 170
+      - 4
+      xy_color:
+      - 0.555
+      - 0.422
+      friendly_name: Stehlampe
+      supported_features: 44
+      state: 'on'
+    light.kugellampe:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 102
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 239.02
+      - 96.078
+      rgb_color:
+      - 10
+      - 14
+      - 255
+      xy_color:
+      - 0.136
+      - 0.041
+      friendly_name: Kugellampe
+      supported_features: 44
+      state: 'on'
+    light.wiz_rgbww_tunable_0176b8:
+      min_color_temp_kelvin: 2200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Alarm
+      - Bedtime
+      - Candlelight
+      - Christmas
+      - Cozy
+      - Cool white
+      - Daylight
+      - Diwali
+      - Deep dive
+      - Fall
+      - Fireplace
+      - Forest
+      - Focus
+      - Golden white
+      - Halloween
+      - Jungle
+      - Mojito
+      - Night light
+      - Ocean
+      - Party
+      - Pulse
+      - Pastel colors
+      - Romance
+      - Relax
+      - Sunset
+      - Spring
+      - Summer
+      - Steampunk
+      - True colors
+      - TV time
+      - White
+      - Wake-up
+      - Warm white
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbww
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      rgbww_color:
+      friendly_name: Nachttisch Licht
+      supported_features: 4
+      state: 'off'
+    light.wiz_rgbw_tunable_5d79b4:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Alarm
+      - Bedtime
+      - Candlelight
+      - Christmas
+      - Cozy
+      - Cool white
+      - Daylight
+      - Diwali
+      - Deep dive
+      - Fall
+      - Fireplace
+      - Forest
+      - Focus
+      - Golden white
+      - Halloween
+      - Jungle
+      - Mojito
+      - Night light
+      - Ocean
+      - Party
+      - Pulse
+      - Pastel colors
+      - Romance
+      - Relax
+      - Sunset
+      - Spring
+      - Summer
+      - Steampunk
+      - True colors
+      - TV time
+      - White
+      - Wake-up
+      - Warm white
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: rgbw
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 14.824
+      - 100
+      rgb_color:
+      - 255
+      - 63
+      - 0
+      xy_color:
+      - 0.677
+      - 0.319
+      rgbw_color:
+      - 255
+      - 63
+      - 0
+      - 0
+      friendly_name: Ambient
+      supported_features: 4
+      state: 'on'
+    light.badezimmer_ambient:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Alarm
+      - Bedtime
+      - Candlelight
+      - Christmas
+      - Cozy
+      - Cool white
+      - Daylight
+      - Diwali
+      - Deep dive
+      - Fall
+      - Fireplace
+      - Forest
+      - Focus
+      - Golden white
+      - Halloween
+      - Jungle
+      - Mojito
+      - Night light
+      - Ocean
+      - Party
+      - Pulse
+      - Pastel colors
+      - Romance
+      - Relax
+      - Sunset
+      - Spring
+      - Summer
+      - Steampunk
+      - True colors
+      - TV time
+      - White
+      - Wake-up
+      - Warm white
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      rgbw_color:
+      friendly_name: Badezimmer Ambient
+      supported_features: 4
+      state: 'off'
+    light.kuche_ambient:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Alarm
+      - Bedtime
+      - Candlelight
+      - Christmas
+      - Cozy
+      - Cool white
+      - Daylight
+      - Diwali
+      - Deep dive
+      - Fall
+      - Fireplace
+      - Forest
+      - Focus
+      - Golden white
+      - Halloween
+      - Jungle
+      - Mojito
+      - Night light
+      - Ocean
+      - Party
+      - Pulse
+      - Pastel colors
+      - Romance
+      - Relax
+      - Sunset
+      - Spring
+      - Summer
+      - Steampunk
+      - True colors
+      - TV time
+      - White
+      - Wake-up
+      - Warm white
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      rgbw_color:
+      friendly_name: Küche Ambient
+      supported_features: 4
+      state: 'off'
+    light.kuche_1:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      friendly_name: Küche 1
+      supported_features: 44
+      state: 'off'
+    light.kuche_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      friendly_name: Küche 2
+      supported_features: 44
+      state: 'off'
+    light.kuche_3:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      friendly_name: Küche 3
+      supported_features: 44
+      state: 'off'
+    light.0x8c65a3fffeeb7a0b:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      friendly_name: Bad 1
+      supported_features: 44
+      state: 'off'
+    light.bad_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      friendly_name: Bad 2
+      supported_features: 44
+      state: 'off'
+    light.bad_3:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      friendly_name: Bad 3
+      supported_features: 44
+      state: 'off'
+    light.ecklicht:
+      min_color_temp_kelvin: 2200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Alarm
+      - Bedtime
+      - Candlelight
+      - Christmas
+      - Cozy
+      - Cool white
+      - Daylight
+      - Diwali
+      - Deep dive
+      - Fall
+      - Fireplace
+      - Forest
+      - Focus
+      - Golden white
+      - Halloween
+      - Jungle
+      - Mojito
+      - Night light
+      - Ocean
+      - Party
+      - Pulse
+      - Pastel colors
+      - Romance
+      - Relax
+      - Sunset
+      - Spring
+      - Summer
+      - Steampunk
+      - True colors
+      - TV time
+      - White
+      - Wake-up
+      - Warm white
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbww
+      effect:
+      color_mode: rgbww
+      brightness: 26
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 15.765
+      - 100
+      rgb_color:
+      - 255
+      - 67
+      - 0
+      xy_color:
+      - 0.674
+      - 0.322
+      rgbww_color:
+      - 255
+      - 67
+      - 0
+      - 0
+      - 0
+      friendly_name: Ecklicht
+      supported_features: 4
+      state: 'on'
+    light.schlafzimmer_deckenlampe:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9000
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Schlafzimmer Deckenlampe
+      supported_features: 32
+      state: 'off'
+    light.flur:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9000
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Flur
+      supported_features: 32
+      state: 'off'
+  metadata:
+    light.kuche_1:
+      entity_only: true
+    light.kuche_2:
+      entity_only: true
+    light.kuche_3:
+      entity_only: true
+    light.0x8c65a3fffeeb7a0b:
+      entity_only: true
+    light.bad_2:
+      entity_only: true
+    light.bad_3:
+      entity_only: true
+    light.ecklicht:
+      entity_only: true
+  icon: mdi:television-box
+- id: '1733572339900'
+  name: Auräumen
+  entities:
+    light.stehlampe:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 22.381
+      - 49.412
+      rgb_color:
+      - 255
+      - 176
+      - 129
+      xy_color:
+      - 0.48
+      - 0.366
+      friendly_name: Stehlampe
+      supported_features: 44
+      state: 'on'
+    light.schlafzimmer_deckenlampe:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3510
+      color_temp: 284
+      hs_color:
+      - 27.163
+      - 44.557
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      friendly_name: Schlafzimmer Deckenlampe
+      supported_features: 0
+      state: 'on'
+    light.wiz_rgbww_tunable_0176b8:
+      min_color_temp_kelvin: 2200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbww
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3649
+      color_temp: 274
+      hs_color:
+      - 27.037
+      - 41.629
+      rgb_color:
+      - 255
+      - 197
+      - 149
+      xy_color:
+      - 0.442
+      - 0.371
+      rgbww_color:
+      friendly_name: Nachttisch Licht
+      supported_features: 4
+      state: 'on'
+    light.flur:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3510
+      color_temp: 284
+      hs_color:
+      - 27.163
+      - 44.557
+      rgb_color:
+      - 255
+      - 193
+      - 141
+      xy_color:
+      - 0.453
+      - 0.374
+      friendly_name: Flur
+      supported_features: 0
+      state: 'on'
+    light.kugellampe:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 21.818
+      - 38.824
+      rgb_color:
+      - 255
+      - 192
+      - 156
+      xy_color:
+      - 0.44
+      - 0.359
+      friendly_name: Kugellampe
+      supported_features: 44
+      state: 'on'
+    light.wiz_rgbw_tunable_5d79b4:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3472
+      color_temp: 288
+      hs_color:
+      - 27.201
+      - 45.386
+      rgb_color:
+      - 255
+      - 192
+      - 139
+      xy_color:
+      - 0.456
+      - 0.375
+      rgbw_color:
+      friendly_name: Ambient
+      supported_features: 4
+      state: 'on'
+    light.kuche_ambient:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 5000
+      color_temp: 200
+      hs_color:
+      - 27.001
+      - 19.243
+      rgb_color:
+      - 255
+      - 228
+      - 206
+      xy_color:
+      - 0.371
+      - 0.349
+      rgbw_color:
+      friendly_name: Küche Ambient
+      supported_features: 4
+      state: 'on'
+    light.badezimmer_ambient:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 3472
+      color_temp: 288
+      hs_color:
+      - 27.201
+      - 45.386
+      rgb_color:
+      - 255
+      - 192
+      - 139
+      xy_color:
+      - 0.456
+      - 0.375
+      rgbw_color:
+      friendly_name: Badezimmer Ambient
+      supported_features: 4
+      state: 'on'
+    light.0x8c65a3fffeeb7a0b:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Bad 1
+      supported_features: 44
+      state: 'on'
+    light.bad_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Bad 2
+      supported_features: 44
+      state: 'on'
+    light.bad_3:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Bad 3
+      supported_features: 44
+      state: 'on'
+    light.kuche_1:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Küche 1
+      supported_features: 44
+      state: 'on'
+    light.kuche_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Küche 2
+      supported_features: 44
+      state: 'on'
+    light.kuche_3:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Küche 3
+      supported_features: 44
+      state: 'on'
+    light.ecklicht:
+      min_color_temp_kelvin: 2200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbww
+      effect:
+      color_mode: color_temp
+      brightness: 255
+      color_temp_kelvin: 6500
+      color_temp: 153
+      hs_color:
+      - 49.231
+      - 1.944
+      rgb_color:
+      - 255
+      - 254
+      - 250
+      xy_color:
+      - 0.326
+      - 0.333
+      rgbww_color:
+      friendly_name: Ecklicht
+      supported_features: 4
+      state: 'on'
+    light.lsc_power_plug_steckdose_1:
+      supported_color_modes:
+      - onoff
+      color_mode: onoff
+      friendly_name: Home Licht
+      supported_features: 0
+      state: 'on'
+  metadata:
+    light.kuche_ambient:
+      entity_only: true
+    light.badezimmer_ambient:
+      entity_only: true
+    light.0x8c65a3fffeeb7a0b:
+      entity_only: true
+    light.bad_2:
+      entity_only: true
+    light.bad_3:
+      entity_only: true
+    light.kuche_1:
+      entity_only: true
+    light.kuche_2:
+      entity_only: true
+    light.kuche_3:
+      entity_only: true
+    light.ecklicht:
+      entity_only: true
+    light.lsc_power_plug_steckdose_1:
+      entity_only: true
+  icon: mdi:vacuum
+- id: '1734040193252'
+  name: Morgens
+  entities:
+    light.schlafzimmer_deckenlampe:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9000
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Schlafzimmer Deckenlampe
+      supported_features: 32
+      state: 'off'
+    light.wiz_rgbww_tunable_0176b8:
+      min_color_temp_kelvin: 2200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Alarm
+      - Bedtime
+      - Candlelight
+      - Christmas
+      - Cozy
+      - Cool white
+      - Daylight
+      - Diwali
+      - Deep dive
+      - Fall
+      - Fireplace
+      - Forest
+      - Focus
+      - Golden white
+      - Halloween
+      - Jungle
+      - Mojito
+      - Night light
+      - Ocean
+      - Party
+      - Pulse
+      - Pastel colors
+      - Romance
+      - Relax
+      - Sunset
+      - Spring
+      - Summer
+      - Steampunk
+      - True colors
+      - TV time
+      - White
+      - Wake-up
+      - Warm white
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbww
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      rgbww_color:
+      friendly_name: Nachttisch Licht
+      supported_features: 4
+      state: 'off'
+    light.flur:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 9000
+      min_mireds: 111
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 15
+      color_temp_kelvin: 3000
+      color_temp: 333
+      hs_color:
+      - 27.825
+      - 56.895
+      rgb_color:
+      - 255
+      - 177
+      - 110
+      xy_color:
+      - 0.496
+      - 0.383
+      friendly_name: Flur
+      supported_features: 32
+      state: 'on'
+    light.badezimmer_ambient:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Alarm
+      - Bedtime
+      - Candlelight
+      - Christmas
+      - Cozy
+      - Cool white
+      - Daylight
+      - Diwali
+      - Deep dive
+      - Fall
+      - Fireplace
+      - Forest
+      - Focus
+      - Golden white
+      - Halloween
+      - Jungle
+      - Mojito
+      - Night light
+      - Ocean
+      - Party
+      - Pulse
+      - Pastel colors
+      - Romance
+      - Relax
+      - Sunset
+      - Spring
+      - Summer
+      - Steampunk
+      - True colors
+      - TV time
+      - White
+      - Wake-up
+      - Warm white
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: rgbw
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 14.824
+      - 100
+      rgb_color:
+      - 255
+      - 63
+      - 0
+      xy_color:
+      - 0.677
+      - 0.319
+      rgbw_color:
+      - 255
+      - 63
+      - 0
+      - 0
+      friendly_name: Badezimmer Ambient
+      supported_features: 4
+      state: 'on'
+    light.kuche_ambient:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Alarm
+      - Bedtime
+      - Candlelight
+      - Christmas
+      - Cozy
+      - Cool white
+      - Daylight
+      - Diwali
+      - Deep dive
+      - Fall
+      - Fireplace
+      - Forest
+      - Focus
+      - Golden white
+      - Halloween
+      - Jungle
+      - Mojito
+      - Night light
+      - Ocean
+      - Party
+      - Pulse
+      - Pastel colors
+      - Romance
+      - Relax
+      - Sunset
+      - Spring
+      - Summer
+      - Steampunk
+      - True colors
+      - TV time
+      - White
+      - Wake-up
+      - Warm white
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: rgbw
+      brightness: 26
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 2.824
+      - 100
+      rgb_color:
+      - 255
+      - 12
+      - 0
+      xy_color:
+      - 0.699
+      - 0.301
+      rgbw_color:
+      - 255
+      - 12
+      - 0
+      - 0
+      friendly_name: Küche Ambient
+      supported_features: 4
+      state: 'on'
+    light.0x8c65a3fffeeb7a0b:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 255
+      friendly_name: Bad 1
+      supported_features: 44
+      state: 'on'
+    light.ecklicht:
+      min_color_temp_kelvin: 2200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Alarm
+      - Bedtime
+      - Candlelight
+      - Christmas
+      - Cozy
+      - Cool white
+      - Daylight
+      - Diwali
+      - Deep dive
+      - Fall
+      - Fireplace
+      - Forest
+      - Focus
+      - Golden white
+      - Halloween
+      - Jungle
+      - Mojito
+      - Night light
+      - Ocean
+      - Party
+      - Pulse
+      - Pastel colors
+      - Romance
+      - Relax
+      - Sunset
+      - Spring
+      - Summer
+      - Steampunk
+      - True colors
+      - TV time
+      - White
+      - Wake-up
+      - Warm white
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbww
+      effect:
+      color_mode: rgbww
+      brightness: 54
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 4.941
+      - 100
+      rgb_color:
+      - 255
+      - 21
+      - 0
+      xy_color:
+      - 0.697
+      - 0.302
+      rgbww_color:
+      - 255
+      - 21
+      - 0
+      - 0
+      - 0
+      friendly_name: Ecklicht
+      supported_features: 4
+      state: 'on'
+  metadata:
+    light.0x8c65a3fffeeb7a0b:
+      entity_only: true
+    light.ecklicht:
+      entity_only: true
+- id: '1734040434319'
+  name: Schlafen
+  entities:
+    light.stehlampe:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 61
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 226.829
+      - 96.471
+      rgb_color:
+      - 9
+      - 63
+      - 255
+      xy_color:
+      - 0.137
+      - 0.061
+      friendly_name: Stehlampe
+      supported_features: 44
+      state: 'on'
+    light.schlafzimmer_deckenlampe:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 3
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 2.006
+      - 95.696
+      rgb_color:
+      - 255
+      - 19
+      - 11
+      xy_color:
+      - 0.695
+      - 0.301
+      friendly_name: Schlafzimmer Deckenlampe
+      supported_features: 0
+      state: 'on'
+    light.wiz_rgbww_tunable_0176b8:
+      min_color_temp_kelvin: 2200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbww
+      effect:
+      color_mode: rgbww
+      brightness: 26
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 15.765
+      - 100
+      rgb_color:
+      - 255
+      - 67
+      - 0
+      xy_color:
+      - 0.674
+      - 0.322
+      rgbww_color:
+      - 255
+      - 67
+      - 0
+      - 0
+      - 0
+      friendly_name: Nachttisch Licht
+      supported_features: 4
+      state: 'on'
+    light.flur:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: hs
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 26.072
+      - 100
+      rgb_color:
+      - 255
+      - 111
+      - 0
+      xy_color:
+      - 0.632
+      - 0.358
+      friendly_name: Flur
+      supported_features: 0
+      state: 'on'
+    light.kugellampe:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 28
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 225.726
+      - 97.255
+      rgb_color:
+      - 7
+      - 66
+      - 255
+      xy_color:
+      - 0.137
+      - 0.063
+      friendly_name: Kugellampe
+      supported_features: 44
+      state: 'on'
+    light.wiz_rgbw_tunable_5d79b4:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: rgbw
+      brightness: 120
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 230
+      - 100
+      rgb_color:
+      - 0
+      - 3
+      - 18
+      xy_color:
+      - 0.139
+      - 0.111
+      rgbw_color:
+      - 0
+      - 3
+      - 18
+      - 0
+      friendly_name: Ambient
+      supported_features: 4
+      state: 'on'
+    light.badezimmer_ambient:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      rgbw_color:
+      friendly_name: Badezimmer Ambient
+      supported_features: 4
+      state: 'off'
+    light.kuche_ambient:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: rgbw
+      brightness: 26
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 232.471
+      - 100
+      rgb_color:
+      - 0
+      - 32
+      - 255
+      xy_color:
+      - 0.136
+      - 0.047
+      rgbw_color:
+      - 0
+      - 32
+      - 255
+      - 0
+      friendly_name: Küche Ambient
+      supported_features: 4
+      state: 'on'
+    light.0x8c65a3fffeeb7a0b:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 150
+      friendly_name: Bad 1
+      supported_features: 44
+      state: 'on'
+    light.bad_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 148
+      friendly_name: Bad 2
+      supported_features: 44
+      state: 'on'
+    light.bad_3:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      friendly_name: Bad 3
+      supported_features: 44
+      state: 'off'
+    light.kuche_1:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 3
+      friendly_name: Küche 1
+      supported_features: 44
+      state: 'on'
+    light.kuche_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      friendly_name: Küche 2
+      supported_features: 44
+      state: 'off'
+    light.kuche_3:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode:
+      brightness:
+      friendly_name: Küche 3
+      supported_features: 44
+      state: 'off'
+    light.ecklicht:
+      min_color_temp_kelvin: 2200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbww
+      supported_features: 4
+      effect:
+      color_mode: rgbww
+      brightness: 31
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 240.941
+      - 100
+      rgb_color:
+      - 4
+      - 0
+      - 255
+      xy_color:
+      - 0.136
+      - 0.04
+      rgbww_color:
+      - 4
+      - 0
+      - 255
+      - 0
+      - 0
+      friendly_name: Ecklicht
+      state: 'on'
+    light.lsc_power_plug_steckdose_1:
+      supported_color_modes:
+      - onoff
+      color_mode:
+      friendly_name: Home Licht
+      supported_features: 0
+      state: 'off'
+  metadata:
+    light.0x8c65a3fffeeb7a0b:
+      entity_only: true
+    light.bad_2:
+      entity_only: true
+    light.bad_3:
+      entity_only: true
+    light.kuche_1:
+      entity_only: true
+    light.kuche_2:
+      entity_only: true
+    light.kuche_3:
+      entity_only: true
+    light.ecklicht:
+      entity_only: true
+    light.lsc_power_plug_steckdose_1:
+      entity_only: true
+- id: '1734043262648'
+  name: Normal
+  entities:
+    light.stehlampe:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: color_temp
+      brightness: 219
+      color_temp_kelvin: 2202
+      color_temp: 454
+      hs_color:
+      - 29.79
+      - 84.553
+      rgb_color:
+      - 255
+      - 146
+      - 39
+      xy_color:
+      - 0.579
+      - 0.388
+      friendly_name: Stehlampe
+      supported_features: 44
+      state: 'on'
+    light.schlafzimmer_deckenlampe:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode:
+      brightness:
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      rgb_color:
+      xy_color:
+      friendly_name: Schlafzimmer Deckenlampe
+      supported_features: 0
+      state: 'off'
+    light.wiz_rgbww_tunable_0176b8:
+      min_color_temp_kelvin: 2200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbww
+      effect:
+      color_mode: rgbww
+      brightness: 99
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 26.824
+      - 100
+      rgb_color:
+      - 255
+      - 114
+      - 0
+      xy_color:
+      - 0.628
+      - 0.361
+      rgbww_color:
+      - 255
+      - 114
+      - 0
+      - 0
+      - 0
+      friendly_name: Nachttisch Licht
+      supported_features: 4
+      state: 'on'
+    light.kuchey:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Küchen Licht
+      supported_features: 32
+      state: 'off'
+    light.flur:
+      min_color_temp_kelvin: 2000
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 500
+      supported_color_modes:
+      - color_temp
+      - hs
+      color_mode: color_temp
+      brightness: 51
+      color_temp_kelvin: 2000
+      color_temp: 500
+      hs_color:
+      - 30.601
+      - 94.547
+      rgb_color:
+      - 255
+      - 137
+      - 14
+      xy_color:
+      - 0.598
+      - 0.383
+      friendly_name: Flur
+      supported_features: 0
+      state: 'on'
+    light.ldvwifia60e27dim_3:
+      supported_color_modes:
+      - brightness
+      color_mode:
+      brightness:
+      friendly_name: Badezimmer Licht
+      supported_features: 32
+      state: 'off'
+    light.kugellampe:
+      min_color_temp_kelvin: 2202
+      max_color_temp_kelvin: 4000
+      min_mireds: 250
+      max_mireds: 454
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      - colorloop
+      - stop_colorloop
+      supported_color_modes:
+      - color_temp
+      - xy
+      effect:
+      color_mode: xy
+      brightness: 178
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 227.265
+      - 96.078
+      rgb_color:
+      - 10
+      - 62
+      - 255
+      xy_color:
+      - 0.137
+      - 0.06
+      friendly_name: Kugellampe
+      supported_features: 44
+      state: 'on'
+    light.wiz_rgbw_tunable_5d79b4:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: rgbw
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 20
+      - 100
+      rgb_color:
+      - 255
+      - 85
+      - 0
+      xy_color:
+      - 0.659
+      - 0.335
+      rgbw_color:
+      - 255
+      - 85
+      - 0
+      - 0
+      friendly_name: Ambient
+      supported_features: 4
+      state: 'on'
+    light.kuche_ambient:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: rgbw
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 21.882
+      - 100
+      rgb_color:
+      - 255
+      - 93
+      - 0
+      xy_color:
+      - 0.651
+      - 0.341
+      rgbw_color:
+      - 255
+      - 93
+      - 0
+      - 0
+      friendly_name: Küche Ambient
+      supported_features: 4
+      state: 'on'
+    light.badezimmer_ambient:
+      min_color_temp_kelvin: 2700
+      max_color_temp_kelvin: 5000
+      min_mireds: 200
+      max_mireds: 370
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbw
+      effect:
+      color_mode: rgbw
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 18.824
+      - 100
+      rgb_color:
+      - 255
+      - 80
+      - 0
+      xy_color:
+      - 0.663
+      - 0.331
+      rgbw_color:
+      - 255
+      - 80
+      - 0
+      - 0
+      friendly_name: Badezimmer Ambient
+      supported_features: 4
+      state: 'on'
+    light.kuche_1:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 128
+      friendly_name: Küche 1
+      supported_features: 44
+      state: 'on'
+    light.kuche_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 115
+      friendly_name: Küche 2
+      supported_features: 44
+      state: 'on'
+    light.kuche_3:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 115
+      friendly_name: Küche 3
+      supported_features: 44
+      state: 'on'
+    light.0x8c65a3fffeeb7a0b:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 69
+      friendly_name: Bad 1
+      supported_features: 44
+      state: 'on'
+    light.bad_2:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 71
+      friendly_name: Bad 2
+      supported_features: 44
+      state: 'on'
+    light.bad_3:
+      effect_list:
+      - blink
+      - breathe
+      - okay
+      - channel_change
+      - finish_effect
+      - stop_effect
+      supported_color_modes:
+      - brightness
+      effect:
+      color_mode: brightness
+      brightness: 74
+      friendly_name: Bad 3
+      supported_features: 44
+      state: 'on'
+    light.ecklicht:
+      min_color_temp_kelvin: 2200
+      max_color_temp_kelvin: 6500
+      min_mireds: 153
+      max_mireds: 454
+      effect_list:
+      - Ocean
+      - Romance
+      - Sunset
+      - Party
+      - Fireplace
+      - Cozy
+      - Forest
+      - Pastel Colors
+      - Wake up
+      - Bedtime
+      - Warm White
+      - Daylight
+      - Cool white
+      - Night light
+      - Focus
+      - Relax
+      - True colors
+      - TV time
+      - Plantgrowth
+      - Spring
+      - Summer
+      - Fall
+      - Deepdive
+      - Jungle
+      - Mojito
+      - Club
+      - Christmas
+      - Halloween
+      - Candlelight
+      - Golden white
+      - Pulse
+      - Steampunk
+      - Rhythm
+      supported_color_modes:
+      - color_temp
+      - rgbww
+      effect:
+      color_mode: rgbww
+      brightness: 255
+      color_temp_kelvin:
+      color_temp:
+      hs_color:
+      - 18.588
+      - 100
+      rgb_color:
+      - 255
+      - 79
+      - 0
+      xy_color:
+      - 0.664
+      - 0.33
+      rgbww_color:
+      - 255
+      - 79
+      - 0
+      - 0
+      - 0
+      friendly_name: Ecklicht
+      supported_features: 4
+      state: 'on'
+    switch.lsc_power_plug_steckdose_1:
+      device_class: outlet
+      friendly_name: LSC Power Plug  Steckdose 1
+      state: 'on'
+  metadata:
+    light.kuche_1:
+      entity_only: true
+    light.kuche_2:
+      entity_only: true
+    light.kuche_3:
+      entity_only: true
+    light.0x8c65a3fffeeb7a0b:
+      entity_only: true
+    light.bad_2:
+      entity_only: true
+    light.bad_3:
+      entity_only: true
+    light.ecklicht:
+      entity_only: true
+    switch.lsc_power_plug_steckdose_1:
+      entity_only: true

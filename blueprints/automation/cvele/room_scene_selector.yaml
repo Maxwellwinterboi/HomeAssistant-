@@ -1,0 +1,220 @@
+blueprint:
+  name: Room Scene Selector
+  description: Automate scene selection and light management in a room using button
+    presses, motion sensors, and optional hold actions.
+  domain: automation
+  input:
+    turn_off_action:
+      name: Turn Off Action
+      description: Select action type to execute turn off
+      default: double
+      selector:
+        select:
+          options:
+          - double
+          - hold
+          multiple: false
+          custom_value: false
+          sort: false
+    special_action_type:
+      name: Special Action Type
+      description: Select action type on which to execute a special action
+      default: hold
+      selector:
+        select:
+          options:
+          - hold
+          - double
+          multiple: false
+          custom_value: false
+          sort: false
+    scene_helper:
+      name: Scene Selection Helper
+      description: Select the input helper that holds the scene IDs.
+      selector:
+        entity:
+          filter:
+          - domain:
+            - input_select
+          multiple: false
+    button_devices:
+      name: Button Devices
+      description: Choose the button devices to trigger scene selection on a single
+        press.
+      selector:
+        entity:
+          domain:
+          - sensor
+          multiple: true
+    target_areas:
+      default: []
+      name: Target Areas for Light Control
+      description: Select the areas where lights should be turned off on configured
+        action (double press or hold).
+      selector:
+        area:
+          multiple: true
+    target_lights:
+      default: []
+      name: Target Lights for Control
+      description: Select the lights to turn off on a configured action (double press
+        or hold) or automatically if a delay is set.
+      selector:
+        entity:
+          domain:
+          - light
+          multiple: true
+    auto_off_delay:
+      name: Automatic Turn Off Delay
+      description: Set the delay before lights turn off automatically (set to 0 to
+        disable).
+      default: 0:00:00
+      selector:
+        duration: {}
+    special_action:
+      name: Special Action
+      description: Select an optional automation or script to execute on a (double
+        press or hold) action.
+      default: ''
+      selector:
+        entity:
+          filter:
+          - domain:
+            - automation
+          - domain:
+            - script
+          - domain:
+            - scene
+          multiple: false
+    occupancy_sensor:
+      default: []
+      name: Motion Sensor
+      description: Choose a motion sensor to monitor occupancy. Lights will turn off
+        if no motion is detected for a specified duration.
+      selector:
+        entity:
+          device_class:
+          - motion
+          multiple: false
+    occupancy_sensor_duration:
+      name: Motion Sensor Duration
+      description: Specify the duration the motion sensor must stay clear to turn
+        off the lights.
+      default: 0:45:00
+      selector:
+        duration: {}
+  source_url: https://gist.github.com/cvele/f55cc01a3eb67a6e7bdfe125b7c1d0c7
+mode: restart
+variables:
+  scene_helper_entity: !input scene_helper
+  auto_off_delay: !input auto_off_delay
+  special_action_entity: !input special_action
+  occupancy_sensor_entity: !input occupancy_sensor
+trigger:
+- id: single
+  platform: state
+  entity_id: !input button_devices
+  to: single
+- id: !input turn_off_action
+  platform: state
+  entity_id: !input button_devices
+  to: !input turn_off_action
+- id: !input special_action_type
+  platform: state
+  entity_id: !input button_devices
+  to: !input special_action_type
+- id: occupancy
+  platform: state
+  entity_id: !input occupancy_sensor
+  to: 'off'
+  for: !input occupancy_sensor_duration
+condition: []
+action:
+- if:
+  - condition: trigger
+    id:
+    - occupancy
+  then:
+  - service: light.turn_off
+    metadata: {}
+    data:
+      transition: 1
+    target:
+      area_id: !input target_areas
+      entity_id: !input target_lights
+  - service: input_select.select_first
+    metadata: {}
+    data: {}
+    target:
+      entity_id: !input scene_helper
+- if:
+  - condition: trigger
+    id:
+    - single
+  then:
+  - service: input_select.select_next
+    target:
+      entity_id: !input scene_helper
+    data:
+      cycle: true
+  - service: scene.turn_on
+    target:
+      entity_id: '{{ states(scene_helper_entity) }}'
+- if:
+  - condition: trigger
+    id:
+    - !input turn_off_action
+  then:
+  - service: light.turn_off
+    metadata: {}
+    data:
+      transition: 1
+    target:
+      area_id: !input target_areas
+      entity_id: !input target_lights
+  - service: input_select.select_first
+    metadata: {}
+    data: {}
+    target:
+      entity_id: !input scene_helper
+- if:
+  - condition: trigger
+    id:
+    - single
+  - condition: template
+    value_template: '{{ not (auto_off_delay == ''0:00:00'') }}'
+  then:
+  - delay: '{{ auto_off_delay }}'
+  - service: light.turn_off
+    data:
+      transition: 1
+    target:
+      entity_id: !input target_lights
+  - service: input_select.select_first
+    metadata: {}
+    data: {}
+    target:
+      entity_id: !input scene_helper
+- if:
+  - condition: trigger
+    id:
+    - !input special_action_type
+  - condition: template
+    value_template: '{{ special_action_entity != '''' }}'
+  then:
+  - choose:
+    - conditions: '{{ special_action_entity.startswith(''automation.'') }}'
+      sequence:
+      - service: automation.trigger
+        target:
+          entity_id: '{{ special_action_entity }}'
+    - conditions: '{{ special_action_entity.startswith(''script.'') }}'
+      sequence:
+      - service: script.turn_on
+        target:
+          entity_id: '{{ special_action_entity }}'
+    - conditions: '{{ special_action_entity.startswith(''scene.'') }}'
+      sequence:
+      - service: scene.turn_on
+        target:
+          entity_id: '{{ special_action_entity }}'

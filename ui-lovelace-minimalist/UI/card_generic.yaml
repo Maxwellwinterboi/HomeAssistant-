@@ -1,0 +1,12 @@
+card_generic:
+  template: "ulm_language_variables"
+  show_icon: true
+  show_name: true
+  show_state: true
+  styles:
+    card:
+      - padding: 16px
+      - background: "var(--card-background-color)"
+      - border-radius: 12px
+    icon:
+      - color: var(--primary-color)

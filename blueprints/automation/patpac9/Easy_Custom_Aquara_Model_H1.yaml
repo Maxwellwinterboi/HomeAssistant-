@@ -1,0 +1,107 @@
+blueprint:
+  name: Easy Custom Actions for Aquara Switch Model H1
+  description: Easy Custom Automation for executing press/hold/doubleclick for Aquara
+    Switches Model H1
+  domain: automation
+  input:
+    controller:
+      name: (Zigbee2MQTT) Controller Name
+      description: The name of the controller/Dimmer-Switch in Zigbee2MQTT (Not the
+        name of your Home-Assistent Entity)
+      default: ''
+    base_topic:
+      name: Root/Base mqtt topic from Zigbee2MQTT
+      description: The Root/base topic as configured in Zigbee2MQTT (If you dont configured
+        it you can leave the default --> "zigbee2mqtt")
+      default: zigbee2mqtt
+    button_1_pressed:
+      name: Button Left Pressed
+      description: Action to run, when Button Left is pressed.
+      default: []
+      selector:
+        action: {}
+    button_1_held:
+      name: Button Left Held
+      description: Action to run, when the Button Left is held.
+      default: []
+      selector:
+        action: {}
+    button_1_doubleclicked:
+      name: Button Left doubleclicked
+      description: Action to run, when the Button Left is doubleclicked.
+      default: []
+      selector:
+        action: {}
+    button_2_pressed:
+      name: Button Right Pressed
+      description: Action to run, when the Button Right pressed.
+      default: []
+      selector:
+        action: {}
+    button_2_held:
+      name: Button Right Held
+      description: Action to run, when the Button Right is held.
+      default: []
+      selector:
+        action: {}
+    button_2_doubleclicked:
+      name: Button Right doubleclicked
+      description: Action to run, when the Button Right is doubleclicked.
+      default: []
+      selector:
+        action: {}
+    Both_Buttons_pressed:
+      name: Both Buttons Pressed
+      description: Action to run, whe Both Buttons pressed.
+      default: []
+      selector:
+        action: {}
+    Both_Buttons_held:
+      name: Both Buttons Held
+      description: Action to run, when Both Buttons held.
+      default: []
+      selector:
+        action: {}
+    Both_Buttons_doubleclicked:
+      name: Both Buttons doubleclicked
+      description: Action to run, when Both Buttons doubleclicked.
+      default: []
+      selector:
+        action: {}
+  source_url: https://gist.github.com/patpac9/40dbf09251e9f73a7933de9c38985c6c
+mode: restart
+max_exceeded: silent
+trigger_variables:
+  base_topic: !input base_topic
+  controller: !input controller
+trigger:
+- platform: mqtt
+  topic: '{{ base_topic ~ ''/'' ~ controller }}'
+condition:
+- condition: template
+  value_template: '{{(trigger.payload_json.action is defined)}}'
+action:
+- variables:
+    controller: !input controller
+- choose:
+  - conditions: '{{trigger.payload_json.action is defined}}'
+    sequence:
+    - choose:
+      - conditions: '{{ trigger.payload_json.action == "single_left" }}'
+        sequence: !input button_1_pressed
+      - conditions: '{{ trigger.payload_json.action == "single_right" }}'
+        sequence: !input button_2_pressed
+      - conditions: '{{ trigger.payload_json.action == "single_both" }}'
+        sequence: !input Both_Buttons_pressed
+      - conditions: '{{ trigger.payload_json.action == "hold_left" }}'
+        sequence: !input button_1_held
+      - conditions: '{{ trigger.payload_json.action == "hold_right" }}'
+        sequence: !input button_2_held
+      - conditions: '{{ trigger.payload_json.action == "hold_both" }}'
+        sequence: !input Both_Buttons_held
+      - conditions: '{{ trigger.payload_json.action == "double_left" }}'
+        sequence: !input button_1_doubleclicked
+      - conditions: '{{ trigger.payload_json.action == "double_right" }}'
+        sequence: !input button_2_doubleclicked
+      - conditions: '{{ trigger.payload_json.action == "double_both" }}'
+        sequence: !input Both_Buttons_doubleclicked

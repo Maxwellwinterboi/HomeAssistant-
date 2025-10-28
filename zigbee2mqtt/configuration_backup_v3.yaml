@@ -1,0 +1,68 @@
+homeassistant: true
+advanced:
+  network_key:
+    - 215
+    - 211
+    - 219
+    - 125
+    - 115
+    - 148
+    - 212
+    - 149
+    - 196
+    - 218
+    - 60
+    - 79
+    - 219
+    - 84
+    - 160
+    - 209
+  pan_id: 63856
+  ext_pan_id:
+    - 156
+    - 31
+    - 149
+    - 172
+    - 29
+    - 185
+    - 105
+    - 40
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+  legacy_availability_payload: false
+frontend:
+  port: 8099
+version: 2
+mqtt:
+  server: mqtt://core-mosquitto:1883
+  user: addons
+  password: goofu7xaxai6eiN9Ughaebae3noh3eiP5leebahf3beishei0aeghae8UGh5ahho
+serial:
+  port: /dev/ttyUSB0
+device_options:
+  legacy: false
+devices:
+  '0x0ceff6fffe16cd9d':
+    friendly_name: Anwesenheit Wohnzimmer
+  '0x881a14fffe47f853':
+    friendly_name: Master
+  '0x8c65a3fffee4d6bb':
+    friendly_name: Küche 1
+  '0x8c65a3fffee4b0d5':
+    friendly_name: Küche 2
+  '0x44e2f8fffe191225':
+    friendly_name: Küche 3
+  '0x8c65a3fffeeb7a0b':
+    friendly_name: Bad 1
+  '0x8c65a3fffee4a0a5':
+    friendly_name: Bad 2
+  '0x8c65a3fffee4f436':
+    friendly_name: Bad 3
+  '0x0ceff6fffe3e306a':
+    friendly_name: 'Anwesenheit Küche '
+  '0x0ceff6fffe674b76':
+    friendly_name: Anwesenheit Badezimmer
+  '0x8c65a3fffecb194e':
+    friendly_name: Kugellampe
+  '0x881a14fffe06ab29':
+    friendly_name: Stehlampe

@@ -1,0 +1,112 @@
+alarm_panel_eventlog:
+  fields:
+    entity_id:
+      required: true
+      example: 'alarm_control_panel.visonic_alarm'
+      selector:
+        entity:
+          integration: visonic
+          domain: alarm_control_panel
+    code:
+      example: "1234"
+      default: "0000"
+      selector:
+        text:
+
+alarm_panel_command:
+  fields:
+    entity_id:
+      required: true
+      example: 'alarm_control_panel.visonic_alarm'
+      selector:
+        entity:
+          integration: visonic
+          domain: alarm_control_panel
+    command:
+      required: true
+      example: 'disarm'
+      selector:
+        select:
+          translation_key: "alarm_command"
+          options:
+            - "disarm"
+            - "arm_home"
+            - "arm_home_instant"
+            - "arm_away"
+            - "arm_away_instant"
+            - "mute"
+            - "trigger"
+            - "fire"
+            - "emergency"
+            - "panic"
+    code:
+      required: false
+      example: "1234"
+      default: "0000"
+      selector:
+        text:
+
+alarm_panel_reconnect:
+  fields:
+    entity_id:
+      required: true
+      example: 'alarm_control_panel.visonic_alarm'
+      selector:
+        entity:
+          integration: visonic
+          domain: alarm_control_panel
+
+alarm_panel_x10:
+  fields:
+    entity_id:
+      required: true
+      example: 'switch.visonic_x02'
+      selector:
+        entity:
+          integration: visonic
+          domain: switch
+    x10command:
+      required: true
+      example: "off"
+      default: "off"
+      selector:
+        select:
+          translation_key: "x10command"
+          options:
+            - "off"
+            - "on"
+            - "dimmer"
+            - "brighten"
+
+alarm_sensor_bypass:
+  fields:
+    entity_id:
+      required: true
+      selector:
+        entity:
+          integration: visonic
+          domain: binary_sensor
+    bypass:
+      required: true
+      example: "off"
+      selector:
+        select:
+          translation_key: "bypass_command"
+          options:
+            - "on"
+            - "off"
+    code:
+      required: false
+      example: "1234"
+      default: "0000"
+      selector:
+        text:
+
+alarm_sensor_image:
+  fields:
+    entity_id:
+      required: true
+      selector:
+        entity:
+          integration: visonic
+          domain: image
