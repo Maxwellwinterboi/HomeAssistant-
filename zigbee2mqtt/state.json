@@ -72,8 +72,8 @@
     },
     "0x3425b4fffe12977f": {
         "battery": 100,
-        "temperature": 12.7,
-        "humidity": 85.5,
+        "temperature": 12.1,
+        "humidity": 84.3,
         "comfort_temperature_min": 19,
         "comfort_temperature_max": 27,
         "comfort_humidity_min": 40,
@@ -139,7 +139,7 @@
         "power_outage_count": 14,
         "energy": 0.87,
         "consumption": 0.8724001049995422,
-        "voltage": 236.46,
+        "voltage": 236.81,
         "current": 0,
         "power": 0,
         "linkquality": 105
@@ -158,7 +158,7 @@
     },
     "0x3425b4fffe130419": {
         "battery": 100,
-        "temperature": 15.3,
+        "temperature": 15.1,
         "humidity": 69.7,
         "comfort_temperature_min": 19,
         "comfort_temperature_max": 27,
@@ -408,7 +408,7 @@
         "dimmer_mode": "dual_ct"
     },
     "0x54ef4410012c9066": {
-        "device_temperature": 29,
+        "device_temperature": 28,
         "power_outage_count": 6,
         "state": "OFF",
         "level_config": {
