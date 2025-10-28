@@ -25,17 +25,6 @@ scene: !include scenes.yaml
 template:
   # Block 1: Nicht-Trigger-basierte Sensoren (sensor:)
   - sensor:
-      # Uhrzeit & Datum
-      - name: current_time_display
-        unique_id: current_time_display
-        state: "{{ now().strftime('%H:%M') }}"
-        scan_interval: 60
-
-      - name: current_date_display
-        unique_id: current_date_display
-        state: "{{ now().strftime('%A, %d %B %Y') }}"
-        scan_interval: 3600
-
       # Anzahl aller eingeschalteten Lampen
       - name: "Anzahl eingeschalteter Lampen"
         unique_id: anzahl_eingeschalteter_lampen
@@ -86,6 +75,19 @@ template:
           {% else %}
             mdi:lightbulb-off
           {% endif %}
+
+  # Block 1a: Zeitbasierte Sensoren mit Trigger
+  - trigger:
+      - platform: time_pattern
+        minutes: "/1"
+    sensor:
+      - name: current_time_display
+        unique_id: current_time_display
+        state: "{{ now().strftime('%H:%M') }}"
+
+      - name: current_date_display
+        unique_id: current_date_display
+        state: "{{ now().strftime('%A, %d %B %Y') }}"
           
 # -------------------------------------------------------------
 # Block 2: Trigger-basierte Template-Entitäten (Jeder Block hat einen eigenen Bindestrich)

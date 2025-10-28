@@ -88,7 +88,7 @@
     attribute: event_type
     to: ding
   - trigger: event
-    event_type: Event.klingel
+    event_type: event.klingel
   conditions: []
   actions:
   - action: tts.speak
