@@ -1,3 +1,4 @@
+# Stellt gespeicherten Zustand wieder her, sobald das Wohnungslicht eingeschaltet wird.
 - id: '1754904576550'
   alias: 'Wohnung Licht Zustand abrufen '
   description: ''
@@ -14,6 +15,7 @@
     data:
       entity_id: light.wohnung_licht
   mode: single
+# Speichert im 30-Sekunden-Takt den aktuellen Zustand des Wohnungslichts.
 - id: '1754904888389'
   alias: 'Speichere Wohnung Licht Zustand '
   description: ''
@@ -28,6 +30,7 @@
       entity_id:
       - light.wohnung_licht
   mode: single
+# Verriegelt die Wohnungstür, wenn der virtuelle Schalter ausgeschaltet wird.
 - id: '1755072460230'
   alias: Wohnungstüre Abschließen
   description: ''
@@ -45,6 +48,7 @@
     target:
       device_id: f8bd706d763958876f63414a852d5bc3
   mode: single
+# Toggelt den Badezimmerspiegel über den passenden Schalter.
 - id: '1755106007479'
   alias: Badezimmerspiegel an/aus
   description: ''
@@ -59,6 +63,7 @@
     entity_id: 1ca01dc5fdae9d07f3a5964aa70e0ae8
     domain: switch
   mode: single
+# Aqara-Blueprint steuert das Wohnzimmerlicht mit beiden Tasten.
 - id: '1755507879614'
   alias: Lichtschalter Wohnzimmer On/Off
   description: ''
@@ -78,6 +83,7 @@
         data: {}
         target:
           area_id: wohnzimmer
+# Klingelbenachrichtigungen: TTS auf mehrere Lautsprecher und TV-Popup.
 - id: '1755586155214'
   alias: 'Klingel Benachrichtigung '
   description: ''
@@ -143,6 +149,7 @@
       - media_player.nestaudio8129
       - media_player.schlafzimmer
   mode: single
+# Öffnet Wohnungstür und Haustür gleichzeitig per Button.
 - id: '1755587373328'
   alias: 'Beide Türen öffnen '
   description: ''
@@ -163,6 +170,7 @@
     target:
       entity_id: button.hausture_tur_offnen
   mode: single
+# Bewegungsabhängige Flurbeleuchtung mit dimmtem Nachtmodus.
 - id: '1755595148085'
   alias: 'Flur Lichteinstellungen '
   description: ''
@@ -193,6 +201,7 @@
       - use_brightness
       light_transition_on: 2.5
       light_transition_off: 2
+# Oberer Bad-Taster toggelt alle Badezimmerlichter.
 - id: '1756831258831'
   alias: Bad Lichtschalter oben
   description: ''
@@ -210,6 +219,7 @@
     target:
       entity_id: light.bad_alles
   mode: single
+# Unterer Bad-Taster steuert den Badezimmerspiegel.
 - id: '1756831418939'
   alias: Bad Lichtschalter unten
   description: ''
@@ -227,6 +237,7 @@
     target:
       entity_id: switch.badezimmerspiegel
   mode: single
+# MQTT-Taster schaltet das Wohnzimmerlicht basierend auf dem aktuellen Zustand.
 - id: '1756831598035'
   alias: 'Wohnzimmer Lichtschalter '
   description: ''
@@ -255,6 +266,7 @@
       target:
         entity_id: light.wohnzimmer_licht
   mode: single
+# Blueprint sorgt für Nachtlicht-Szenario im Badezimmer.
 - id: '1756885403932'
   alias: Badezimmer Nachtlicht
   description: ''
@@ -277,6 +289,7 @@
       - use_brightness
       night_lights_before_time: 06:00:00
       night_lights_after_time: '23:40:00'
+# Bewegungssteuerung im Bad inklusive Nachtmodus und Farbtemperatur.
 - id: '1756993984696'
   alias: 'Bad Lichteinstellungen '
   description: ''
@@ -306,6 +319,7 @@
       light_transition_on: 1.5
       light_transition_off: 2
       light_colour_temperature: 8000
+# Passt die Displayhelligkeit des Tablets abhängig von der Uhrzeit an.
 - id: '1757354319725'
   alias: Bildschirm Helligkeit tablet
   description: ''
@@ -348,6 +362,7 @@
         type: set_value
         value: 100
   mode: single
+# Bürobeleuchtung reagiert auf Bewegung mit sanften Übergängen.
 - id: '1759118304161'
   alias: 'Büro Lichteinstellungen '
   description: ''
